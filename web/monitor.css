@@ -1,0 +1,203 @@
+.monitor-panel {
+  position: fixed;
+  top: 40px;
+  right: 10px;
+  background-color: rgba(30, 30, 30, 0.85);
+  border-radius: 8px;
+  color: white;
+  font-size: 12px;
+  z-index: 1000;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  display: none;
+  width: 240px;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  user-select: none;
+}
+
+.monitor-panel.dragging {
+  opacity: 0.7;
+  cursor: move;
+}
+
+.monitor-panel.locked {
+  border: 1px solid rgba(100, 181, 246, 0.4);
+  box-shadow: 0 4px 16px rgba(33, 150, 243, 0.3);
+}
+
+.monitor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: move;
+  position: relative;
+}
+
+.monitor-header.locked {
+  cursor: default;
+  background-color: rgba(33, 150, 243, 0.1);
+}
+
+.monitor-drag-handle {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.monitor-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.monitor-lock-icon {
+  display: none;
+  color: #64B5F6;
+  font-size: 10px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.monitor-panel.locked .monitor-lock-icon {
+  display: inline-block;
+}
+
+.monitor-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.monitor-pin-btn,
+.monitor-close-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.monitor-pin-btn:hover,
+.monitor-close-btn:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.monitor-pin-btn.active {
+  color: #64B5F6;
+  background-color: rgba(33, 150, 243, 0.2);
+}
+
+.monitor-content {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.monitor-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  align-items: center;
+}
+
+.monitor-value {
+  font-weight: bold;
+  margin-left: 10px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.progress-bar {
+  height: 4px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-top: 2px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #4CAF50;
+  transition: width 0.3s ease;
+}
+
+#gpu-bar {
+  background-color: #2196F3; /* 蓝色 */
+}
+
+#gpu-temp-bar {
+  /* 默认绿色，在JavaScript中根据温度动态变化 */
+}
+
+#gpu-memory-bar {
+  background-color: #9C27B0; /* 紫色 */
+}
+
+#cpu-bar {
+  background-color: #FF9800; /* 橙色 */
+}
+
+#ram-bar {
+  background-color: #E91E63; /* 粉色 */
+}
+
+.monitor-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.monitor-btn {
+  display: flex;
+  align-items: center;
+  padding: 2px 8px;
+  background: none;
+  border: none;
+  color: var(--fg-color);
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: color 0.2s ease;
+  height: 100%;
+}
+
+.monitor-btn:hover {
+  color: var(--active-color);
+}
+
+.monitor-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .monitor-panel {
+    top: 36px;
+    right: 5px;
+    padding: 0;
+    max-width: 90vw;
+    width: 220px;
+  }
+  
+  .monitor-content {
+    padding: 8px;
+  }
+  
+  .monitor-btn span {
+    display: none;
+  }
+  
+  .monitor-icon {
+    margin-right: 0;
+  }
+} 
