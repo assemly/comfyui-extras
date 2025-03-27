@@ -1,0 +1,15 @@
+[project]
+name = "extras"
+description = ""
+version = "1.0.0"
+license = {file = "LICENSE"}
+dependencies = ["psutil>=5.9.0", "pynvml>=11.0.0"]
+
+[project.urls]
+Repository = "https://github.com/assemly/comfyui-extras"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "comfyui-extras"
+Icon = ""
