@@ -1,0 +1,14 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+
+*.so
+*.dll
+*.dylib
+*.lib
+*.exp
+*.def
+*.manifest

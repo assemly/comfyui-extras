@@ -18,8 +18,8 @@ keywords = ["comfyui", "tutorial", "learning", "workflow", "stable-diffusion"]
 requires-python = ">=3.8"
 
 [project.urls]
-"Homepage" = "https://github.com/yourusername/comfyui-learningcenter"
-"Bug Tracker" = "https://github.com/yourusername/comfyui-learningcenter/issues"
+"Homepage" = "https://github.com/assemly/comfyui-learningcenter"
+"Bug Tracker" = "https://github.com/assemly/comfyui-learningcenter/issues"
 
 [tool.comfy]
 title = "学习中心"
