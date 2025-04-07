@@ -1,0 +1,9 @@
+{
+  "title": "CosXL Edit + ArtGallery 1.0",
+  "description": "CosXL Edit + ArtGallery是一个结合了高级编辑功能和艺术风格转换的工作流，可以进行精细的图像编辑并应用艺术效果。这个工作流展示了如何在ComfyUI中实现高级图像处理和风格化。",
+  "difficulty": "advanced",
+  "model": "other",
+  "purpose": "image_edit",
+  "estimated_time": 40,
+  "learning_objectives": "学习如何使用ComfyUI进行高级图像编辑，掌握艺术风格转换的技巧和参数，了解复杂工作流的构建方法和调试技巧。"
+} 

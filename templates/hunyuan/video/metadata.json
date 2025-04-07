@@ -1,0 +1,9 @@
+{
+  "title": "HUNYUAN VIDEO 1.0",
+  "description": "腾讯混元视频模型（HUNYUAN VIDEO）是腾讯推出的文本到视频模型，这个工作流展示了混元视频模型在ComfyUI中的使用方法和视频生成过程。",
+  "difficulty": "intermediate",
+  "model": "other",
+  "purpose": "animation",
+  "estimated_time": 35,
+  "learning_objectives": "学习如何使用混元视频模型生成高质量视频，掌握中文提示词对视频生成的影响，理解视频生成的关键参数和优化方法。"
+} 

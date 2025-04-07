@@ -1,0 +1,9 @@
+{
+  "title": "Stable Cascade 提示词混合技术",
+  "description": "这个工作流演示了如何在Stable Cascade中使用ImagePrompt混合技术，通过组合多个文本提示和权重来获得更丰富、更精确的生成结果。提示词混合允许你精细控制生成图像的不同方面，实现复杂的创意构思。",
+  "difficulty": "advanced",
+  "model": "stable_cascade",
+  "purpose": "prompt_engineering",
+  "estimated_time": 35,
+  "learning_objectives": "掌握Stable Cascade中的提示词混合技术，学习设置不同提示词权重的方法，理解如何组合多个提示以实现复杂的创意概念和视觉效果。"
+} 

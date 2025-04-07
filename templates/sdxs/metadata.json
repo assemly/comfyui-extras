@@ -1,0 +1,7 @@
+{
+  "title": "SDXS模型工作流",
+  "description": "SDXS是Stability AI推出的新一代小型扩散模型，它保持了SDXL的图像质量但大大减小了模型体积。这些工作流展示了SDXS模型在ComfyUI中的使用方法和生成效果。",
+  "model": "other",
+  "purpose": "image_gen",
+  "difficulty": "intermediate"
+} 

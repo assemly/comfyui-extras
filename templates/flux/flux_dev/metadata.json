@@ -1,0 +1,9 @@
+{
+  "title": "FLUX.1 DEV 1.0",
+  "description": "FLUX.1 DEV是Stability AI推出的文本到视频模型的开发版本，这个工作流展示了FLUX.1 DEV模型在ComfyUI中的基本使用方法。",
+  "difficulty": "intermediate",
+  "model": "other",
+  "purpose": "animation",
+  "estimated_time": 30,
+  "learning_objectives": "学习如何使用FLUX.1 DEV模型生成视频，掌握文本到视频生成的基本参数设置，理解视频生成与图像生成的区别。"
+} 

@@ -1,0 +1,9 @@
+{
+    "title": "可爱你 Cute You",
+    "description": "将照片转换为可爱的卡通风格，增强照片的表现力和趣味性",
+    "difficulty": "intermediate",
+    "model_type": "other",
+    "purpose": "image_manipulation",
+    "estimated_time": "15-30分钟",
+    "learning_objectives": ["学习使用ControlNet将照片转换为卡通风格", "掌握照片风格转换技巧", "了解图像处理的工作流程"]
+} 

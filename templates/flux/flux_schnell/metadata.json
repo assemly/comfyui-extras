@@ -1,0 +1,9 @@
+{
+  "title": "FLUX.1 SCHNELL 1.0",
+  "description": "FLUX.1 SCHNELL是Stability AI推出的文本到视频模型的快速版本，这个工作流展示了FLUX.1 SCHNELL模型在ComfyUI中的高效使用方法。",
+  "difficulty": "intermediate",
+  "model": "other",
+  "purpose": "animation",
+  "estimated_time": 25,
+  "learning_objectives": "学习如何使用FLUX.1 SCHNELL模型快速生成视频，掌握高效视频生成的参数配置，了解不同FLUX模型版本的特点和适用场景。"
+} 

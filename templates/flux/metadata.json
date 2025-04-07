@@ -1,0 +1,7 @@
+{
+  "title": "FLUX模型工作流",
+  "description": "FLUX是由Stability AI推出的文本到视频模型，这些工作流展示了FLUX模型在ComfyUI中的使用方法和应用场景。",
+  "model": "other",
+  "purpose": "animation",
+  "difficulty": "intermediate"
+} 

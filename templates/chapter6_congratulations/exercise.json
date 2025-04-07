@@ -1,0 +1,247 @@
+{
+  "id": "28385e99-0923-4856-8615-f23068709572",
+  "revision": 0,
+  "last_node_id": 67,
+  "last_link_id": 130,
+  "nodes": [
+    {
+      "id": 67,
+      "type": "PreviewImage",
+      "pos": [
+        -100.43751525878906,
+        504.3162841796875
+      ],
+      "size": [
+        210,
+        246
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 130
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 63,
+      "type": "MarkdownNote",
+      "pos": [
+        -560.7755126953125,
+        191.90652465820312
+      ],
+      "size": [
+        383.9143981933594,
+        182.75518798828125
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "🎉 恭喜你完成 ComfyUI 入门教程！",
+      "properties": {},
+      "widgets_values": [
+        " 🎉\n太棒了！终于跨出了探索 ComfyUI 的第一步，相信你已经对节点式工作流有了更清晰的认识~ 🚀\n从零开始搭建流程可能有点烧脑，但你能坚持下来真的超厉害！✨\n接下来可以尝试复现一些经典案例，或者挑战自定义工作流，慢慢解锁更多玩法！\n如果遇到问题也别担心，点击链接加入[QQ群聊【森么问题吖】](https://qm.qq.com/q/y33rTbBMFG)很多热心大佬，随时欢迎交流分享~ 💡\n\n再次恭喜，期待看到你的创意作品！🌟\n\n接下来你去探索各种搜集到实用工作流吧（很多工作流需要补全自定义节点和模型下载，想必通过学习也应该难不倒你了）！\n\n"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 66,
+      "type": "ChapterInfoDisplay",
+      "pos": [
+        -502.684326171875,
+        579.212158203125
+      ],
+      "size": [
+        315,
+        78
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            130
+          ]
+        },
+        {
+          "localized_name": "chapter_title",
+          "name": "chapter_title",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-extras",
+        "ver": "96ae9847ddba6a8cfa6172cfe277e1fe6fdf8b7e",
+        "Node name for S&R": "ChapterInfoDisplay"
+      },
+      "widgets_values": [
+        "chapter6_congratulations"
+      ]
+    }
+  ],
+  "links": [
+    [
+      130,
+      66,
+      0,
+      67,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "去探索吧",
+      "bounding": [
+        -551.0615234375,
+        407.767822265625,
+        733.198486328125,
+        409.0210266113281
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.2491603427072275,
+      "offset": [
+        1222.7127193273336,
+        -41.12137879055505
+      ]
+    },
+    "groupNodes": {
+      "1::imgconvenience": {
+        "author": "1",
+        "category": "test",
+        "datetime": 1742697742923,
+        "external": [
+          [
+            1,
+            0,
+            "IMAGE"
+          ]
+        ],
+        "links": [
+          [
+            0,
+            0,
+            1,
+            0,
+            76,
+            "IMAGE"
+          ]
+        ],
+        "nodes": [
+          {
+            "flags": {},
+            "id": -1,
+            "index": 0,
+            "inputs": [],
+            "mode": 0,
+            "order": 1,
+            "outputs": [
+              {
+                "links": [],
+                "localized_name": "图像",
+                "name": "IMAGE",
+                "type": "IMAGE"
+              }
+            ],
+            "pos": [
+              -336.2590026855469,
+              827.5228881835938
+            ],
+            "properties": {
+              "Node name for S&R": "EmptyImage",
+              "cnr_id": "comfy-core",
+              "ver": "0.3.27"
+            },
+            "size": [
+              315,
+              130
+            ],
+            "type": "EmptyImage",
+            "widgets_values": [
+              512,
+              512,
+              1,
+              0
+            ]
+          },
+          {
+            "flags": {},
+            "id": -1,
+            "index": 1,
+            "inputs": [
+              {
+                "link": null,
+                "localized_name": "图像",
+                "name": "image",
+                "type": "IMAGE"
+              }
+            ],
+            "mode": 0,
+            "order": 6,
+            "outputs": [
+              {
+                "links": [],
+                "localized_name": "图像",
+                "name": "IMAGE",
+                "type": "IMAGE"
+              }
+            ],
+            "pos": [
+              63.65825653076172,
+              829.6044921875
+            ],
+            "properties": {
+              "Node name for S&R": "ImageScale",
+              "cnr_id": "comfy-core",
+              "ver": "0.3.27"
+            },
+            "size": [
+              315,
+              130
+            ],
+            "type": "ImageScale",
+            "widgets_values": [
+              "nearest-exact",
+              512,
+              512,
+              "disabled"
+            ]
+          }
+        ],
+        "packname": "1",
+        "version": "0.0"
+      }
+    }
+  },
+  "version": 0.4
+}

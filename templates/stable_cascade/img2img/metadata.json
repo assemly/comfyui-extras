@@ -1,0 +1,9 @@
+{
+  "title": "Stable Cascade 图像到图像转换",
+  "description": "这个工作流展示了如何使用Stable Cascade进行图像到图像转换，让你能够基于现有图像生成新图像。Stable Cascade的两阶段结构在保留参考图像结构的同时提供出色的文本引导能力。",
+  "difficulty": "intermediate",
+  "model": "stable_cascade",
+  "purpose": "img2img",
+  "estimated_time": 25,
+  "learning_objectives": "学习如何使用Stable Cascade进行图像到图像转换，掌握调整强度参数影响生成结果的方法，理解如何平衡保留原始图像内容和引入新元素。"
+} 

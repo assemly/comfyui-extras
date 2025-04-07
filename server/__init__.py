@@ -1,1 +1,1 @@
-from .monitor import *
+# WorkflowHub server initialization

@@ -1,15 +1,26 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "extras"
-description = ""
+name = "comfyui-learningcenter"
 version = "1.0.0"
-license = {file = "LICENSE"}
-dependencies = ["psutil>=5.9.0", "pynvml>=11.0.0"]
+description = "ComfyUI学习中心插件，提供教程章节和示例工作流，帮助用户学习和掌握ComfyUI"
+readme = "README.md"
+authors = [{ name = "Your Name", email = "your.email@example.com" }]
+license = { text = "MIT" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["comfyui", "tutorial", "learning", "workflow", "stable-diffusion"]
+requires-python = ">=3.8"
 
 [project.urls]
-Repository = "https://github.com/assemly/comfyui-extras"
-#  Used by Comfy Registry https://comfyregistry.org
+"Homepage" = "https://github.com/yourusername/comfyui-learningcenter"
+"Bug Tracker" = "https://github.com/yourusername/comfyui-learningcenter/issues"
 
 [tool.comfy]
-PublisherId = ""
-DisplayName = "comfyui-extras"
-Icon = ""
+title = "学习中心"
+nodeType = "Tutorial"

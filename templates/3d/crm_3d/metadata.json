@@ -1,0 +1,9 @@
+{
+  "title": "CRM Comfy 3D",
+  "description": "CRM Comfy 3D是一个能够生成3D模型的工作流，通过利用特定的节点组合实现从2D图像到3D模型的转换。",
+  "difficulty": "advanced",
+  "model": "other",
+  "purpose": "3d",
+  "estimated_time": 30,
+  "learning_objectives": "学习如何使用ComfyUI创建3D模型，掌握CRM节点的使用方法和参数设置，理解3D模型生成的基本原理。"
+} 

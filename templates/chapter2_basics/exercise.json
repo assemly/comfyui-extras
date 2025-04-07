@@ -1,0 +1,694 @@
+{
+  "id": "a9ff9e79-409f-4124-bc54-a81a0f7cdcc8",
+  "revision": 0,
+  "last_node_id": 52,
+  "last_link_id": 30,
+  "nodes": [
+    {
+      "id": 41,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1303.470703125,
+        648.4683837890625
+      ],
+      "size": [
+        425.27801513671875,
+        180.6060791015625
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 21
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            25
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "text, watermark"
+      ]
+    },
+    {
+      "id": 45,
+      "type": "VAEDecode",
+      "pos": [
+        2099.468505859375,
+        447.46868896484375
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 27
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            29
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 46,
+      "type": "SaveImage",
+      "pos": [
+        2341.46875,
+        448.46868896484375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "图片",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 29
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27"
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 42,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1305.470703125,
+        445.46868896484375
+      ],
+      "size": [
+        422.84503173828125,
+        164.31304931640625
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            24
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "beautiful scenery nature glass bottle landscape, , purple galaxy bottle,"
+      ]
+    },
+    {
+      "id": 43,
+      "type": "EmptyLatentImage",
+      "pos": [
+        1409.273193359375,
+        942.8970336914062
+      ],
+      "size": [
+        315,
+        106
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "localized_name": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            26
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        512,
+        512,
+        1
+      ]
+    },
+    {
+      "id": 44,
+      "type": "KSampler",
+      "pos": [
+        1753.4705810546875,
+        445.46868896484375
+      ],
+      "size": [
+        315,
+        262
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": null
+        },
+        {
+          "localized_name": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 24
+        },
+        {
+          "localized_name": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 25
+        },
+        {
+          "localized_name": "Latent图像",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            27
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        156680208700286,
+        "randomize",
+        20,
+        8,
+        "euler",
+        "normal",
+        1
+      ]
+    },
+    {
+      "id": 47,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        916.470458984375,
+        733.4684448242188
+      ],
+      "size": [
+        315,
+        98
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "localized_name": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": null
+        },
+        {
+          "localized_name": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 1,
+          "links": [
+            21,
+            22
+          ]
+        },
+        {
+          "localized_name": "VAE",
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 2,
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "v1-5-pruned-emaonly-fp16.safetensors"
+      ]
+    },
+    {
+      "id": 49,
+      "type": "MarkdownNote",
+      "pos": [
+        305.2660827636719,
+        694.5679931640625
+      ],
+      "size": [
+        509.5846862792969,
+        308.7621154785156
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "KSampler",
+      "properties": {},
+      "widgets_values": [
+        "## 基本功能\nK采样器(KSampler)是ComfyUI中实现**稳定扩散模型推理**的核心节点，负责控制图像生成的去噪过程。\n\n## 主要参数配置\n\n### 输入参数\n```python\n{\n  \"model\": \"基础模型\",\n  \"positive\": \"正向提示词嵌入\",\n  \"negative\": \"负向提示词嵌入\",\n  \"latent_image\": \"初始潜变量\",\n  \"seed\": 随机种子,\n  \"steps\": 20,          # 总迭代步数\n  \"cfg\": 7.0,          # 分类器自由引导系数\n  \"sampler_name\": \"euler\",  # 采样方法\n  \"scheduler\": \"normal\",    # 调度策略\n  \"denoise\": 1.0       # 去噪强度(0-1)\n}"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 26,
+      "type": "MarkdownNote",
+      "pos": [
+        305.21832275390625,
+        296.7875061035156
+      ],
+      "size": [
+        514.5917358398438,
+        349.9717102050781
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "CLIP文本编码",
+      "properties": {},
+      "widgets_values": [
+        "**CLIP文本编码**是将自然语言文本转换为机器可理解的向量表示的过程，用于指导AI图像生成（如Stable Diffusion）。\n\n## 核心流程\n1. **分词（Tokenization）**  \n   - 输入文本 → 拆分为token（如`[\"a\", \"sunny\", \"beach\"]`）  \n   - 每个token转换为数字ID（通过CLIP词表）\n\n2. **向量化（Embedding）**  \n   - 每个ID → **768维向量**（CLIP文本编码器生成）  \n   - 上下文处理：Transformer分析token关系\n\n3. **输出**  \n   - 组合所有token向量 → `77x768`张量（Stable Diffusion的标准输入）\n\n## 为什么重要？\n- ✅ **语义理解**：将\"猫\"≠\"狗\"转化为数值差异  \n- ✅ **跨模态桥梁**：文本向量与图像向量空间对齐  \n- ✅ **控制生成**：正/负提示词均通过CLIP编码实现\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 50,
+      "type": "MarkdownNote",
+      "pos": [
+        306.74090576171875,
+        1050.43798828125
+      ],
+      "size": [
+        500.2151184082031,
+        286.49371337890625
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "空Latent图",
+      "properties": {},
+      "widgets_values": [
+        "## 基本概念\n空Latent图像（Empty Latent Image）是图像生成的起点，表示一个未经解码的随机噪声场。\n\n## 核心节点：Empty Latent Image\n\n### 参数说明\n```python\n{\n  \"width\": 512,       # 潜空间宽度 (像素/64)\n  \"height\": 512,      # 潜空间高度 (像素/64)\n  \"batch_size\": 1     # 同时生成的图像数量\n}"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 51,
+      "type": "MarkdownNote",
+      "pos": [
+        -222.87510681152344,
+        527.887451171875
+      ],
+      "size": [
+        496.3046875,
+        346.1276550292969
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "VAE",
+      "properties": {},
+      "widgets_values": [
+        "## 基本概念\n**VAE** (Variational Autoencoder) 是Stable Diffusion中负责图像与潜空间(latent space)相互转换的核心组件\n\n## 核心功能\n**编码过程：**图像 → 潜空间表示 (压缩到1/8尺寸)\n\n**解码过程：**潜空间 → 可视图像 (放大8倍)\n\n## 主要类型\n| 类型 | 特点 | 适用场景 |\n|------|------|----------|\n| **标准VAE** | 官方原版 | 通用场景 |\n| **EMA-VAE** | 指数移动平均优化 | 减少伪影 |\n| **MSE-VAE** | 均方误差优化 | 保留细节 |\n| **XL-VAE** | 专为SDXL设计 | SDXL模型 |"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 52,
+      "type": "MarkdownNote",
+      "pos": [
+        -222.75938415527344,
+        932.6854858398438
+      ],
+      "size": [
+        507.3258056640625,
+        338.2554626464844
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "正面提示词与负面提示词",
+      "properties": {},
+      "widgets_values": [
+        " ## 基本概念对比\n|                | 正面提示词                     | 负面提示词                     |\n|----------------|-------------------------------|-------------------------------|\n| **作用**       | 描述期望图像内容               | 排除不希望出现的元素           |\n| **语法**       | 支持权重控制`(word:1.3)`       | 支持排除标记`[word]`           |\n| **CLIP处理**   | 经过文本编码器正向强化         | 经过文本编码器负向抑制         |\n\n## 核心编写原则\n\n### 正面提示词三要素\n1. **主体描述**  \n   `(1girl:1.2), detailed face, flowing dress`\n2. **风格设定**  \n   `studio lighting, unreal engine 5, 8k`\n3. **质量强化**  \n   `best quality, masterpiece, ultra-detailed`"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 48,
+      "type": "MarkdownNote",
+      "pos": [
+        -217.43490600585938,
+        301.2272033691406
+      ],
+      "size": [
+        485.1600036621094,
+        172.5048828125
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Checkpoint 加载器（模型加载器）",
+      "properties": {},
+      "widgets_values": [
+        "\n\n## 基本功能\n- 用于加载AI模型的权重文件（如`.ckpt`或`.safetensors`）\n- 常见于Stable Diffusion等生成式AI工具\n\n## 主要类型\n### 1. 原生加载器\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 40,
+      "type": "MarkdownNote",
+      "pos": [
+        923.0772705078125,
+        453.8724060058594
+      ],
+      "size": [
+        325.8995361328125,
+        178.4848175048828
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "作业",
+      "properties": {},
+      "widgets_values": [
+        "## 现在完成第二章学习吧：\n 1.连接相关节点\n\n 2.并生成1024*1024 的图片\n"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    }
+  ],
+  "links": [
+    [
+      21,
+      47,
+      1,
+      41,
+      0,
+      "CLIP"
+    ],
+    [
+      22,
+      47,
+      1,
+      42,
+      0,
+      "CLIP"
+    ],
+    [
+      24,
+      42,
+      0,
+      44,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      25,
+      41,
+      0,
+      44,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      26,
+      43,
+      0,
+      44,
+      3,
+      "LATENT"
+    ],
+    [
+      27,
+      44,
+      0,
+      45,
+      0,
+      "LATENT"
+    ],
+    [
+      29,
+      45,
+      0,
+      46,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "第2章：基本图像生成工作流，并完成作业",
+      "bounding": [
+        -249.466064453125,
+        191.56654357910156,
+        1095.114990234375,
+        1167.6544189453125
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "作业区",
+      "bounding": [
+        885.4374389648438,
+        193.90402221679688,
+        1687.1058349609375,
+        1096.804443359375
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6351449517889703,
+      "offset": [
+        667.176132979295,
+        -120.9411785635117
+      ]
+    },
+    "groupNodes": {
+      "1::imgconvenience": {
+        "author": "1",
+        "category": "test",
+        "datetime": 1742697742923,
+        "external": [
+          [
+            1,
+            0,
+            "IMAGE"
+          ]
+        ],
+        "links": [
+          [
+            0,
+            0,
+            1,
+            0,
+            76,
+            "IMAGE"
+          ]
+        ],
+        "nodes": [
+          {
+            "flags": {},
+            "id": -1,
+            "index": 0,
+            "inputs": [],
+            "mode": 0,
+            "order": 1,
+            "outputs": [
+              {
+                "links": [],
+                "localized_name": "图像",
+                "name": "IMAGE",
+                "type": "IMAGE"
+              }
+            ],
+            "pos": [
+              -336.2590026855469,
+              827.5228881835938
+            ],
+            "properties": {
+              "Node name for S&R": "EmptyImage",
+              "cnr_id": "comfy-core",
+              "ver": "0.3.27"
+            },
+            "size": [
+              315,
+              130
+            ],
+            "type": "EmptyImage",
+            "widgets_values": [
+              512,
+              512,
+              1,
+              0
+            ]
+          },
+          {
+            "flags": {},
+            "id": -1,
+            "index": 1,
+            "inputs": [
+              {
+                "link": null,
+                "localized_name": "图像",
+                "name": "image",
+                "type": "IMAGE"
+              }
+            ],
+            "mode": 0,
+            "order": 6,
+            "outputs": [
+              {
+                "links": [],
+                "localized_name": "图像",
+                "name": "IMAGE",
+                "type": "IMAGE"
+              }
+            ],
+            "pos": [
+              63.65825653076172,
+              829.6044921875
+            ],
+            "properties": {
+              "Node name for S&R": "ImageScale",
+              "cnr_id": "comfy-core",
+              "ver": "0.3.27"
+            },
+            "size": [
+              315,
+              130
+            ],
+            "type": "ImageScale",
+            "widgets_values": [
+              "nearest-exact",
+              512,
+              512,
+              "disabled"
+            ]
+          }
+        ],
+        "packname": "1",
+        "version": "0.0"
+      }
+    }
+  },
+  "version": 0.4
+}

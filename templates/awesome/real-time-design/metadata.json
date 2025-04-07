@@ -1,0 +1,9 @@
+{
+    "title": "实时设计 Real-Time Design",
+    "description": "提供实时响应的设计工作流，大大缩短生成图像的时间，适合快速迭代设计和概念验证",
+    "difficulty": "advanced",
+    "model_type": "other",
+    "purpose": "image_generation",
+    "estimated_time": "25-40分钟",
+    "learning_objectives": ["学习优化AI图像生成速度的技术", "掌握实时设计反馈的工作流", "了解低延迟图像生成的优化方法"]
+} 

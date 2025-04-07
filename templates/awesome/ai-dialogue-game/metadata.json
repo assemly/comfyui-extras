@@ -1,0 +1,9 @@
+{
+    "title": "AI对话游戏-西游记 AI Dialogue Game",
+    "description": "基于西游记题材的AI对话游戏生成器，可创建互动式对话场景和游戏内容",
+    "difficulty": "advanced",
+    "model_type": "other",
+    "purpose": "interactive",
+    "estimated_time": "30-50分钟",
+    "learning_objectives": ["学习AI生成互动内容的技术", "掌握对话游戏设计的工作流", "了解AI与游戏开发结合的可能性"]
+} 

@@ -1,0 +1,7 @@
+{
+  "title": "腾讯混元模型工作流",
+  "description": "腾讯混元（HUNYUAN）是腾讯推出的大型AI模型系列，这些工作流展示了混元视频模型在ComfyUI中的使用方法和生成能力。",
+  "model": "other",
+  "purpose": "animation",
+  "difficulty": "intermediate"
+} 

@@ -1,0 +1,9 @@
+{
+    "title": "简易2D转3D Easy 2D to 3D",
+    "description": "一键将2D图像转换为3D模型视图，无需复杂设置，适合3D建模初学者",
+    "difficulty": "beginner",
+    "model_type": "other",
+    "purpose": "3d_modeling",
+    "estimated_time": "10-20分钟",
+    "learning_objectives": ["学习基础的2D图像转3D技术", "了解深度估计在3D转换中的应用", "掌握简单的3D生成工作流"]
+} 

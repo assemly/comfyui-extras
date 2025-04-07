@@ -1,0 +1,648 @@
+{
+  "id": "a9ff9e79-409f-4124-bc54-a81a0f7cdcc8",
+  "revision": 0,
+  "last_node_id": 54,
+  "last_link_id": 32,
+  "nodes": [
+    {
+      "id": 45,
+      "type": "VAEDecode",
+      "pos": [
+        2099.468505859375,
+        447.46868896484375
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 27
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 32
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            29
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 46,
+      "type": "SaveImage",
+      "pos": [
+        2341.46875,
+        448.46868896484375
+      ],
+      "size": [
+        210,
+        270
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "图片",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 29
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27"
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 43,
+      "type": "EmptyLatentImage",
+      "pos": [
+        1409.273193359375,
+        942.8970336914062
+      ],
+      "size": [
+        315,
+        106
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "localized_name": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            26
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        512,
+        512,
+        1
+      ]
+    },
+    {
+      "id": 44,
+      "type": "KSampler",
+      "pos": [
+        1753.4705810546875,
+        445.46868896484375
+      ],
+      "size": [
+        315,
+        262
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 31
+        },
+        {
+          "localized_name": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 24
+        },
+        {
+          "localized_name": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 25
+        },
+        {
+          "localized_name": "Latent图像",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            27
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        245627554884797,
+        "randomize",
+        20,
+        8,
+        "euler",
+        "normal",
+        1
+      ]
+    },
+    {
+      "id": 47,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        916.470458984375,
+        733.4684448242188
+      ],
+      "size": [
+        315,
+        98
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "localized_name": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            31
+          ]
+        },
+        {
+          "localized_name": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 1,
+          "links": [
+            21,
+            22
+          ]
+        },
+        {
+          "localized_name": "VAE",
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 2,
+          "links": [
+            32
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "v1-5-pruned-emaonly-fp16.safetensors"
+      ]
+    },
+    {
+      "id": 48,
+      "type": "MarkdownNote",
+      "pos": [
+        -217.43490600585938,
+        301.2272033691406
+      ],
+      "size": [
+        480.2514343261719,
+        361.0546875
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "提示词基本概念",
+      "properties": {},
+      "widgets_values": [
+        " \n**提示词（Prompt）** 是用户与 Stable Diffusion 互动时输入的文本指令，用于引导模型生成期望的图像。\n\n## 核心功能  \n**图像生成：** 描述内容 → 生成符合语义的图像  \n**风格控制：** 加入修饰词 → 改变画面风格、细节、构图等  \n**精度提升：** 明确限定 → 提高目标清晰度与一致性\n\n## 主要类型  \n| 类型 | 特点 | 适用场景 |  \n|------|------|----------|  \n| **正向提示词（Positive Prompt）** | 指出想要的元素 | 主体构图、风格要求 |  \n| **负向提示词（Negative Prompt）** | 排除不想要的元素 | 清除杂质、避免错误内容 |  \n| **关键词堆叠** | 重复词语强化影响 | 提高特定效果 |  \n| **语义引导** | 使用修饰词+描述 | 控制色调与风格 |  \n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 53,
+      "type": "MarkdownNote",
+      "pos": [
+        -217.74172973632812,
+        722.8982543945312
+      ],
+      "size": [
+        489.914794921875,
+        431.290771484375
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "常见风格类型",
+      "properties": {},
+      "widgets_values": [
+        "## 风格类型\n\n| 风格名称 | 特点描述 | 示例关键词 |\n|----------|----------|------------|\n| **写实风格（Photorealistic）** | 逼真、自然光影、高清细节 | ultra-realistic, 8k, natural lighting, high detail |\n| **动漫风格（Anime）** | 二次元、鲜明线条、夸张表现 | anime style, cel shading, vibrant colors |\n| **赛博朋克（Cyberpunk）** | 霓虹灯、高科技、都市未来感 | cyberpunk, neon lights, futuristic city |\n| **油画风格（Oil Painting）** | 厚涂笔触、艺术感强 | oil painting, brush strokes, classic portrait |\n| **水墨风格（Ink Wash）** | 东方韵味、留白、黑白灰调 | ink wash, sumi-e, chinese painting |\n| **蒸汽波（Vaporwave）** | 复古、霓虹、数字文化 | vaporwave, synthwave, retro aesthetic |\n| **幻想风格（Fantasy）** | 魔法元素、史诗场景 | fantasy art, magical forest, epic landscape |\n| **暗黑风格（Dark Art）** | 哥特、恐怖、低饱和度 | dark art, gothic, moody atmosphere |\n| **未来科幻（Sci-Fi）** | 太空、机械、科技感 | sci-fi, space station, robot design |\n| **梦境/超现实（Surrealism）** | 非现实组合、抽象构图 | surrealism, dreamlike, impossible structures |\n\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 54,
+      "type": "MarkdownNote",
+      "pos": [
+        295.0356750488281,
+        724.288330078125
+      ],
+      "size": [
+        529.7033081054688,
+        426.9892883300781
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "注意事项",
+      "properties": {},
+      "widgets_values": [
+        "## 编写提示词时的注意事项\n\n| 注意点 | 描述 | 示例 / 建议 |\n|--------|------|--------------|\n| **从主体开始** | 明确描述你想要生成的“核心对象” | a girl with silver hair, a futuristic city |\n| **由大到小** | 先描述整体，再添加细节 | \"a castle\" → \"a medieval castle on a cliff during sunset\" |\n| **使用修饰词** | 增加画面感和细节层次 | highly detailed, dynamic lighting, soft focus |\n| **控制画面风格** | 加入风格类词汇改变输出 | in the style of Makoto Shinkai, digital painting |\n| **合理使用逗号分隔** | 分隔不同属性，避免混淆 | girl, red dress, standing in a forest |\n| **避免矛盾关键词** | 不要同时出现互斥描述 | e.g. “daytime” + “starry sky”会产生冲突 |\n| **使用权重调整重点** | `()` 和 `[]` 控制词语影响力 | `(golden light:1.5)` 增强效果，`[blurry:0.3]` 降低影响 |\n| **负向提示词** | 明确说出“不需要”的内容 | blurry, extra fingers, bad anatomy |\n| **风格不要堆叠太多** | 风格关键词太多会让模型迷失方向 | 推荐保持 1～2 个主要风格标签 |\n| **适当尝试反复迭代** | 同样的 prompt 多试几次，效果会不同 | 修改词序、替换词、调整权重尝试不同结果 |\n"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 40,
+      "type": "MarkdownNote",
+      "pos": [
+        923.0772705078125,
+        453.8724060058594
+      ],
+      "size": [
+        325.8995361328125,
+        178.4848175048828
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "作业",
+      "properties": {},
+      "widgets_values": [
+        "## 现在完成第三章学习吧：\n 1.根据阅读提示词工程基础里面的风格类型及注意事项写出一个银发女孩，在未来城市的漫画风格，并且不模糊\n\n 2.请在正向提示词中，分别写出相关的提示词\n"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 42,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1305.470703125,
+        445.46868896484375
+      ],
+      "size": [
+        422.84503173828125,
+        164.31304931640625
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            24
+          ]
+        }
+      ],
+      "title": "正向提示词",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 41,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1303.470703125,
+        648.4683837890625
+      ],
+      "size": [
+        425.27801513671875,
+        180.6060791015625
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 21
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            25
+          ]
+        }
+      ],
+      "title": "负向提示词",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    }
+  ],
+  "links": [
+    [
+      21,
+      47,
+      1,
+      41,
+      0,
+      "CLIP"
+    ],
+    [
+      22,
+      47,
+      1,
+      42,
+      0,
+      "CLIP"
+    ],
+    [
+      24,
+      42,
+      0,
+      44,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      25,
+      41,
+      0,
+      44,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      26,
+      43,
+      0,
+      44,
+      3,
+      "LATENT"
+    ],
+    [
+      27,
+      44,
+      0,
+      45,
+      0,
+      "LATENT"
+    ],
+    [
+      29,
+      45,
+      0,
+      46,
+      0,
+      "IMAGE"
+    ],
+    [
+      31,
+      47,
+      0,
+      44,
+      0,
+      "MODEL"
+    ],
+    [
+      32,
+      47,
+      2,
+      45,
+      1,
+      "VAE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "第3章：阅读提示词工程基础，并完成作业",
+      "bounding": [
+        -249.466064453125,
+        191.56654357910156,
+        1095.114990234375,
+        1167.6544189453125
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "作业区",
+      "bounding": [
+        885.4374389648438,
+        193.90402221679688,
+        1687.1058349609375,
+        1096.804443359375
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.4976385725211117,
+      "offset": [
+        -762.0751468819045,
+        -312.9971630428685
+      ]
+    },
+    "groupNodes": {
+      "1::imgconvenience": {
+        "author": "1",
+        "category": "test",
+        "datetime": 1742697742923,
+        "external": [
+          [
+            1,
+            0,
+            "IMAGE"
+          ]
+        ],
+        "links": [
+          [
+            0,
+            0,
+            1,
+            0,
+            76,
+            "IMAGE"
+          ]
+        ],
+        "nodes": [
+          {
+            "flags": {},
+            "id": -1,
+            "index": 0,
+            "inputs": [],
+            "mode": 0,
+            "order": 1,
+            "outputs": [
+              {
+                "links": [],
+                "localized_name": "图像",
+                "name": "IMAGE",
+                "type": "IMAGE"
+              }
+            ],
+            "pos": [
+              -336.2590026855469,
+              827.5228881835938
+            ],
+            "properties": {
+              "Node name for S&R": "EmptyImage",
+              "cnr_id": "comfy-core",
+              "ver": "0.3.27"
+            },
+            "size": [
+              315,
+              130
+            ],
+            "type": "EmptyImage",
+            "widgets_values": [
+              512,
+              512,
+              1,
+              0
+            ]
+          },
+          {
+            "flags": {},
+            "id": -1,
+            "index": 1,
+            "inputs": [
+              {
+                "link": null,
+                "localized_name": "图像",
+                "name": "image",
+                "type": "IMAGE"
+              }
+            ],
+            "mode": 0,
+            "order": 6,
+            "outputs": [
+              {
+                "links": [],
+                "localized_name": "图像",
+                "name": "IMAGE",
+                "type": "IMAGE"
+              }
+            ],
+            "pos": [
+              63.65825653076172,
+              829.6044921875
+            ],
+            "properties": {
+              "Node name for S&R": "ImageScale",
+              "cnr_id": "comfy-core",
+              "ver": "0.3.27"
+            },
+            "size": [
+              315,
+              130
+            ],
+            "type": "ImageScale",
+            "widgets_values": [
+              "nearest-exact",
+              512,
+              512,
+              "disabled"
+            ]
+          }
+        ],
+        "packname": "1",
+        "version": "0.0"
+      }
+    }
+  },
+  "version": 0.4
+}

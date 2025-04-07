@@ -1,0 +1,9 @@
+{
+  "title": "Stable Cascade 局部重绘与ControlNet",
+  "description": "这个工作流演示了如何使用Stable Cascade结合ControlNet进行图像局部重绘（Inpainting）。通过指定蒙版区域，你可以选择性地替换或修改图像的特定部分，同时保持其余部分不变。",
+  "difficulty": "advanced",
+  "model": "stable_cascade",
+  "purpose": "inpainting",
+  "estimated_time": 30,
+  "learning_objectives": "学习Stable Cascade的局部重绘功能，掌握蒙版创建和使用技巧，理解ControlNet在引导生成内容方面的作用，以及如何实现无缝的图像编辑。"
+} 

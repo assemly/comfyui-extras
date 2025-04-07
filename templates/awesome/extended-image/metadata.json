@@ -1,0 +1,9 @@
+{
+    "title": "图像扩展 Extended Image",
+    "description": "将现有图像扩展到更大的画布，无缝匹配原始图像的内容和风格，适用于创作更大尺寸的图像",
+    "difficulty": "intermediate",
+    "model_type": "other",
+    "purpose": "image_manipulation",
+    "estimated_time": "15-30分钟",
+    "learning_objectives": ["学习图像扩展和外补绘技术", "掌握大尺寸图像创作方法", "了解图像边缘处理的工作流程"]
+} 

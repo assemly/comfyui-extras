@@ -1,81 +1,113 @@
- // 系统监控UI模板
+// 工作流模板库UI模板
 
-// 监控按钮模板
-export const MONITOR_BUTTON_TEMPLATE = (svgIcon) => `
-<div class="monitor-icon">${svgIcon}</div>
-<span>监控</span>
+// 模板按钮模板
+export const TEMPLATE_BUTTON_TEMPLATE = (svgIcon) => `
+<div class="learningcenter-icon">${svgIcon}</div>
+<span>学习中心</span>
 `;
 
-// 监控图标SVG模板
-export const MONITOR_ICON_SVG = `
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-  <line x1="8" y1="21" x2="16" y2="21"></line>
-  <line x1="12" y1="17" x2="12" y2="21"></line>
-  <polyline points="10 8 12 10 14 8"></polyline>
-  <line x1="12" y1="5" x2="12" y2="10"></line>
+// 模板图标SVG模板
+export const TEMPLATE_ICON_SVG = `
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="learningcenter-icon">
+  <!-- 文件夹 -->
+  <path d="M2 6a2 2 0 0 1 2-2h5l2 2h9a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6z"></path>
+  <!-- 模板网格 -->
+  <rect x="6" y="12" width="4" height="4" rx="0.5" fill="currentColor" opacity="0.5"></rect>
+  <rect x="14" y="12" width="4" height="4" rx="0.5" fill="currentColor" opacity="0.5"></rect>
+  <rect x="10" y="8" width="4" height="4" rx="0.5" fill="currentColor" opacity="0.5"></rect>
 </svg>
 `;
 
-// 监控面板头部模板
-export const MONITOR_HEADER_TEMPLATE = `
-<div class="monitor-drag-handle">
-  <span class="monitor-title">
-    <span class="monitor-lock-icon">🔒</span>
-    系统资源监控
-  </span>
-</div>
-<div class="monitor-controls">
-  <button class="monitor-pin-btn" title="固定位置">
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M12 2L12 22"></path>
-      <path d="M5 12H22"></path>
-    </svg>
-  </button>
-  <button class="monitor-close-btn" title="关闭面板">
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M18 6L6 18"></path>
-      <path d="M6 6L18 18"></path>
-    </svg>
-  </button>
+// 模板面板头部模板
+export const TEMPLATE_HEADER_TEMPLATE = `
+<div class="learningcenter-header-content" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+  <div class="learningcenter-drag-handle" style="display: flex; align-items: center;">
+    <span class="learningcenter-title">
+      <svg class="learningcenter-header-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <!-- 文件夹 -->
+        <path d="M2 6a2 2 0 0 1 2-2h5l2 2h9a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6z"></path>
+        <!-- 模板网格 -->
+        <rect x="6" y="12" width="4" height="4" rx="0.5" fill="currentColor" opacity="0.5"></rect>
+        <rect x="14" y="12" width="4" height="4" rx="0.5" fill="currentColor" opacity="0.5"></rect>
+        <rect x="10" y="8" width="4" height="4" rx="0.5" fill="currentColor" opacity="0.5"></rect>
+      </svg>
+      学习中心
+    </span>
+  </div>
+  <div class="learningcenter-controls">
+    <button class="learningcenter-close-btn" title="关闭面板" style="background: none; border: none; cursor: pointer; color: var(--comfy-text-color); padding: 4px; margin-right: 4px; line-height: 1; opacity: 0.7; transition: opacity 0.2s; font-size: 14px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M18 6L6 18"></path>
+        <path d="M6 6L18 18"></path>
+      </svg>
+    </button>
+  </div>
 </div>
 `;
 
-// 监控面板内容模板
-export const MONITOR_CONTENT_TEMPLATE = `
-<div class="monitor-item">
-  <span>CPU:</span>
-  <span class="monitor-value" id="cpu-usage">0%</span>
+// 模板面板内容模板
+export const TEMPLATE_CONTENT_TEMPLATE = `
+<div class="learningcenter-templates-container">
+  <div class="learningcenter-template-card">
+    <div class="learningcenter-template-title">
+      <span>模板名称</span>
+      <span class="learningcenter-template-source">个人</span>
+    </div>
+    <div class="learningcenter-template-description">模板描述内容...</div>
+    <div class="learningcenter-template-tags">
+      <span class="learningcenter-tag">人像</span>
+      <span class="learningcenter-tag">初级</span>
+      <span class="learningcenter-tag">SD1.5</span>
+    </div>
+  </div>
 </div>
-<div class="progress-bar">
-  <div class="progress-bar-fill" id="cpu-bar" style="width: 0%"></div>
+`;
+
+// 空状态模板
+export const TEMPLATE_EMPTY_STATE_TEMPLATE = `
+<div class="learningcenter-empty-state">
+  暂无模板，请使用"保存为模板"节点添加模板。
 </div>
-<div class="monitor-item">
-  <span>内存:</span>
-  <span class="monitor-value" id="ram-usage">0/0GB (0%)</span>
+`;
+
+// 模板详情模板
+export const TEMPLATE_DETAILS_TEMPLATE = `
+<div class="learningcenter-details-header">
+  <h3>模板详情</h3>
+  <button class="learningcenter-details-close">×</button>
 </div>
-<div class="progress-bar">
-  <div class="progress-bar-fill" id="ram-bar" style="width: 0%"></div>
+<div class="learningcenter-details-preview">
+  <img src="" alt="预览图">
 </div>
-<div class="monitor-item">
-  <span>GPU:</span>
-  <span class="monitor-value" id="gpu-usage">0%</span>
-</div>
-<div class="progress-bar">
-  <div class="progress-bar-fill" id="gpu-bar" style="width: 0%"></div>
-</div>
-<div class="monitor-item">
-  <span>GPU温度:</span>
-  <span class="monitor-value" id="gpu-temp">0°C</span>
-</div>
-<div class="progress-bar">
-  <div class="progress-bar-fill" id="gpu-temp-bar" style="width: 0%"></div>
-</div>
-<div class="monitor-item">
-  <span>GPU内存:</span>
-  <span class="monitor-value" id="gpu-memory">0/0GB (0%)</span>
-</div>
-<div class="progress-bar">
-  <div class="progress-bar-fill" id="gpu-memory-bar" style="width: 0%"></div>
+<div class="learningcenter-details-content">
+  <div class="learningcenter-details-section">
+    <h4>描述</h4>
+    <p>模板描述内容...</p>
+  </div>
+  <div class="learningcenter-details-section">
+    <h4>分类</h4>
+    <div class="learningcenter-details-tags">
+      <div class="learningcenter-details-tag">用途: 人像</div>
+      <div class="learningcenter-details-tag">复杂度: 初级</div>
+      <div class="learningcenter-details-tag">模型: SD1.5</div>
+    </div>
+  </div>
+  <div class="learningcenter-details-section">
+    <h4>标签</h4>
+    <div class="learningcenter-details-tags">
+      <div class="learningcenter-details-tag">标签1</div>
+      <div class="learningcenter-details-tag">标签2</div>
+    </div>
+  </div>
+  <div class="learningcenter-details-section">
+    <div class="learningcenter-details-info">
+      来源: 个人模板<br>
+      创建时间: 2023-01-01 12:34
+    </div>
+  </div>
+  <div class="learningcenter-details-actions">
+    <button class="learningcenter-import-btn">导入工作流</button>
+    <button class="learningcenter-delete-btn">删除</button>
+  </div>
 </div>
 `;

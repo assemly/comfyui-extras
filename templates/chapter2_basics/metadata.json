@@ -1,0 +1,17 @@
+{
+  "title": "第2章：基本图像生成工作流",
+  "description": "上方扫描加入QQ交流群，获取更多学习资源。在本章中，你将学习如何创建一个完整的图像生成工作流。我们将使用KSampler、CLIP文本编码器和其他基本节点，从文本提示词生成一张图像。完成本章后，你将理解Stable Diffusion的基本工作原理和ComfyUI中的核心节点。",
+  "difficulty": "beginner",
+  "purpose": "tutorial",
+  "model": "sd15",
+  "complexity": "medium",
+  "learning_objectives": [
+    "理解Stable Diffusion的基本工作原理",
+    "学习使用文本提示词生成图像",
+    "掌握KSampler节点的基本参数",
+    "了解正面和负面提示词的作用"
+  ],
+  "prerequisites": ["chapter1_intro"],
+  "estimated_time": "20分钟",
+  "related_chapters": ["chapter1_intro", "chapter3_text"]
+} 

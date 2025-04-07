@@ -1,0 +1,19 @@
+{
+  "title": "第4章：ControlNet控制图像生成",
+  "description": "ControlNet是一种强大的控制模型，可以精确引导图像生成过程。本章将介绍如何在ComfyUI中使用ControlNet实现对图像构图、姿势、线条和边缘的精确控制。你将学习如何结合参考图像和提示词，创建出符合特定需求的图像。",
+  "difficulty": "intermediate",
+  "purpose": "tutorial",
+  "model": "sd15",
+  "complexity": "advanced",
+  "learning_objectives": [
+    "理解ControlNet的工作原理和应用场景",
+    "学习在ComfyUI中加载和使用ControlNet模型",
+    "掌握不同预处理器的作用和选择方法",
+    "创建利用ControlNet的复杂图像生成工作流",
+    "实现精确控制图像的构图、姿势和风格"
+  ],
+  "prerequisites": ["chapter1_intro", "chapter2_basics", "chapter3_text"],
+  "estimated_time": "60分钟",
+  "related_chapters": ["chapter3_text", "chapter5_inpainting"],
+  "tags": ["controlnet", "构图控制", "姿势控制", "边缘控制"]
+} 

@@ -1,0 +1,19 @@
+{
+  "title": "第5章：图像修复与局部编辑",
+  "description": "图像修复(Inpainting)是AI图像编辑中最实用的技术之一。本章将教你如何在ComfyUI中使用遮罩和修复模型，对现有图像进行局部修改，包括替换背景、修复缺陷、添加或移除物体等。掌握这些技术将使你能够精确控制图像的每个部分。",
+  "difficulty": "intermediate",
+  "purpose": "tutorial",
+  "model": "sd15",
+  "complexity": "advanced",
+  "learning_objectives": [
+    "理解图像修复的工作原理和应用场景",
+    "学习创建和使用遮罩进行局部编辑",
+    "掌握不同修复模型的特点和选择方法",
+    "创建处理复杂修复任务的工作流",
+    "实践多种常见修复场景的解决方案"
+  ],
+  "prerequisites": ["chapter2_basics", "chapter3_text", "chapter4_controlnet"],
+  "estimated_time": "75分钟",
+  "related_chapters": ["chapter4_controlnet", "chapter6_workflow"],
+  "tags": ["inpainting", "图像修复", "局部编辑", "遮罩"]
+} 

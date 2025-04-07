@@ -1,0 +1,9 @@
+{
+  "title": "Stable Cascade 标准工作流",
+  "description": "Stable Cascade是Stability AI推出的两阶段扩散模型，比传统模型更加高效。这个工作流展示了基础的文本到图像生成流程，使用ImagePrompt技术提升视觉质量。",
+  "difficulty": "intermediate",
+  "model": "stable_cascade",
+  "purpose": "image_gen",
+  "estimated_time": 20,
+  "learning_objectives": "学习Stable Cascade的基本工作原理，掌握两阶段扩散模型的使用技巧，理解ImagePrompt技术在提升图像质量方面的作用。"
+} 

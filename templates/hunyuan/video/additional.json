@@ -1,0 +1,9 @@
+{
+  "title": "Hunyuan Text to Video",
+  "description": "使用腾讯混元（HUNYUAN）模型将文本提示转换为视频的工作流。这是一个基础示例，展示了如何使用混元视频模型基于文本描述生成视频内容。",
+  "difficulty": "intermediate",
+  "model": "other",
+  "purpose": "animation",
+  "estimated_time": 20,
+  "learning_objectives": "学习使用混元视频模型将文本转换为视频，了解文本到视频的工作原理，掌握视频生成参数的调整方法。"
+} 

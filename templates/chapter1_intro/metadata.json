@@ -1,0 +1,17 @@
+{
+  "title": "第1章：ComfyUI基础介绍",
+  "description": "欢迎来到ComfyUI学习课程！本章将介绍ComfyUI的基本概念和界面，帮助你熟悉这个强大的工作流工具。你将学习如何启动ComfyUI、了解界面布局，以及如何添加和连接基本节点。",
+  "difficulty": "beginner",
+  "purpose": "tutorial",
+  "model": "any",
+  "complexity": "simple",
+  "learning_objectives": [
+    "了解ComfyUI的基本功能和界面",
+    "学会添加和连接基本节点",
+    "了解工作流的基本概念",
+    "完成你的第一个简单图像生成工作流"
+  ],
+  "prerequisites": [],
+  "estimated_time": "15分钟",
+  "related_chapters": ["chapter2_basics"]
+} 

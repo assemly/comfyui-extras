@@ -1,0 +1,9 @@
+{
+  "title": "SDXS-512-0.9",
+  "description": "SDXS-512-0.9是Stability AI推出的新一代小型扩散模型，输出512x512分辨率的图像。这个工作流展示了SDXS-512模型的基本用法和图像生成过程。",
+  "difficulty": "beginner",
+  "model": "other",
+  "purpose": "image_gen",
+  "estimated_time": 15,
+  "learning_objectives": "学习如何使用SDXS-512模型生成图像，掌握小型扩散模型的参数设置，了解SDXS与其他扩散模型的区别。"
+} 

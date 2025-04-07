@@ -1,0 +1,9 @@
+{
+    "title": "面部替换 Face Off",
+    "description": "实现两张图片之间的面部替换，可用于创意图像编辑和身份变换效果",
+    "difficulty": "advanced",
+    "model_type": "other",
+    "purpose": "image_manipulation",
+    "estimated_time": "30-45分钟",
+    "learning_objectives": ["学习面部检测和替换技术", "掌握高级图像编辑技巧", "了解人脸处理的工作流程"]
+} 

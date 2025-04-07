@@ -1,0 +1,456 @@
+{
+  "id": "a9ff9e79-409f-4124-bc54-a81a0f7cdcc8",
+  "revision": 0,
+  "last_node_id": 40,
+  "last_link_id": 20,
+  "nodes": [
+    {
+      "id": 22,
+      "type": "MarkdownNote",
+      "pos": [
+        132.90582275390625,
+        299.5405578613281
+      ],
+      "size": [
+        329.1490478515625,
+        251.31072998046875
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "顶部菜单栏",
+      "properties": {},
+      "widgets_values": [
+        "- **文件菜单**：\n  - 新建/打开/保存工作流(.json)\n  - 导入/导出带工作流的PNG图片\n- **编辑菜单**：\n  - 撤销/重做操作\n  - 节点分组管理\n- **视图菜单**：\n  - 显示/隐藏各功能面板\n  - 切换亮/暗色主题"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 21,
+      "type": "MarkdownNote",
+      "pos": [
+        133.0682373046875,
+        595.0089721679688
+      ],
+      "size": [
+        329.1490478515625,
+        251.31072998046875
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "中央工作区",
+      "properties": {},
+      "widgets_values": [
+        "- **基本操作**：\n  - 右键菜单添加节点\n  - 拖动连接节点端口\n  - Ctrl+拖动多选节点\n- **画布控制**：\n  - 鼠标滚轮缩放\n  - 空格+拖动平移视图\n  - Ctrl+加减号快速缩放"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 19,
+      "type": "MarkdownNote",
+      "pos": [
+        -210.64271545410156,
+        593.9281616210938
+      ],
+      "size": [
+        329.1490478515625,
+        251.31072998046875
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "左侧面板",
+      "properties": {},
+      "widgets_values": [
+        "- **节点分类库**：\n  - 按功能分类的节点列表\n  - 支持搜索和收藏常用节点\n- **模型管理器**：\n  - 可视化模型列表(checkpoint/Lora/VAE等)\n  - 拖拽即可加载模型\n- **任务队列**：\n  - 查看待处理和已完成任务\n  - 调整任务优先级\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 24,
+      "type": "MarkdownNote",
+      "pos": [
+        -208.76942443847656,
+        888.2449340820312
+      ],
+      "size": [
+        329.1490478515625,
+        251.31072998046875
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "常用快捷键",
+      "properties": {},
+      "widgets_values": [
+        "## 常用快捷键\n| 快捷键 | 功能 |\n|--------|------|\n| Ctrl+Enter | 执行当前工作流 |\n| Ctrl+Shift+Enter | 优先执行当前工作流 |\n| Alt+C | 折叠/展开选中节点 |\n| Ctrl+G | 创建节点组 |\n| 双击节点标题 | 重命名节点 |"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 26,
+      "type": "MarkdownNote",
+      "pos": [
+        -211.1352081298828,
+        300.3424377441406
+      ],
+      "size": [
+        329.1490478515625,
+        251.31072998046875
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "主界面布局",
+      "properties": {},
+      "widgets_values": [
+        "\n最新版ComfyUI界面主要分为6个区域：\n\n1. **顶部菜单栏** - 文件操作与视图设置\n2. **左侧面板** - 节点库与资源管理\n3. **中央工作区** - 节点编辑画布\n4. **右侧面板** - 节点参数配置\n5. **底部状态栏** - 执行控制与日志\n6. **浮动工具栏** - 常用工具快捷入口"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 23,
+      "type": "MarkdownNote",
+      "pos": [
+        474.9483642578125,
+        594.8850708007812
+      ],
+      "size": [
+        329.1490478515625,
+        251.31072998046875
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "右侧面板",
+      "properties": {},
+      "widgets_values": [
+        "\n- **节点参数**：\n  - 实时编辑选中节点的参数\n  - 支持参数预设保存\n- **工作流信息**：\n  - 显示当前工作流统计信息\n  - 节点数量/类型分布"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 25,
+      "type": "MarkdownNote",
+      "pos": [
+        135.8660430908203,
+        889.427734375
+      ],
+      "size": [
+        329.1490478515625,
+        251.31072998046875
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "推荐扩展功能",
+      "properties": {},
+      "widgets_values": [
+        "## 推荐扩展功能\n1. **ComfyUI管理器** - 节点与插件管理\n2. **工作流优化器** - 自动优化节点连接\n3. **实时预览** - 生成过程可视化\n4. **中文语言包** - 本地化界面支持"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 31,
+      "type": "ChapterInfoDisplay",
+      "pos": [
+        991.6658325195312,
+        374.6600646972656
+      ],
+      "size": [
+        315,
+        78
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "localized_name": "chapter_title",
+          "name": "chapter_title",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-extras",
+        "ver": "96ae9847ddba6a8cfa6172cfe277e1fe6fdf8b7e",
+        "Node name for S&R": "ChapterInfoDisplay"
+      },
+      "widgets_values": [
+        "chapter1_intro"
+      ]
+    },
+    {
+      "id": 40,
+      "type": "MarkdownNote",
+      "pos": [
+        992.7769165039062,
+        537.7916259765625
+      ],
+      "size": [
+        311.2765197753906,
+        129.8988037109375
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "作业",
+      "properties": {},
+      "widgets_values": [
+        "## 现在完成第一章学习吧：\n1. 连线章节信息显示节点到预览图像\n2. 点击运行查看预览图像吧"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 37,
+      "type": "PrimitiveString",
+      "pos": [
+        1399.4365234375,
+        879.3054809570312
+      ],
+      "size": [
+        497.812255859375,
+        116.06977844238281
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "value",
+          "type": "STRING",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "PrimitiveString"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 30,
+      "type": "PreviewImage",
+      "pos": [
+        1402.4171142578125,
+        376.2563171386719
+      ],
+      "size": [
+        494.9720458984375,
+        438.4905700683594
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    }
+  ],
+  "links": [],
+  "groups": [
+    {
+      "id": 1,
+      "title": "第1章：ComfyUI基础介绍-请花一点时间来熟悉界面，并完成作业",
+      "bounding": [
+        -249.466064453125,
+        191.56654357910156,
+        1080.9449462890625,
+        1074.76220703125
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "作业区",
+      "bounding": [
+        891.6585693359375,
+        195.68148803710938,
+        1080.9449462890625,
+        1074.76220703125
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.5249131832966694,
+      "offset": [
+        813.3849509683052,
+        40.54808863764522
+      ]
+    },
+    "groupNodes": {
+      "1::imgconvenience": {
+        "author": "1",
+        "category": "test",
+        "datetime": 1742697742923,
+        "external": [
+          [
+            1,
+            0,
+            "IMAGE"
+          ]
+        ],
+        "links": [
+          [
+            0,
+            0,
+            1,
+            0,
+            76,
+            "IMAGE"
+          ]
+        ],
+        "nodes": [
+          {
+            "flags": {},
+            "id": -1,
+            "index": 0,
+            "inputs": [],
+            "mode": 0,
+            "order": 1,
+            "outputs": [
+              {
+                "links": [],
+                "localized_name": "图像",
+                "name": "IMAGE",
+                "type": "IMAGE"
+              }
+            ],
+            "pos": [
+              -336.2590026855469,
+              827.5228881835938
+            ],
+            "properties": {
+              "Node name for S&R": "EmptyImage",
+              "cnr_id": "comfy-core",
+              "ver": "0.3.27"
+            },
+            "size": [
+              315,
+              130
+            ],
+            "type": "EmptyImage",
+            "widgets_values": [
+              512,
+              512,
+              1,
+              0
+            ]
+          },
+          {
+            "flags": {},
+            "id": -1,
+            "index": 1,
+            "inputs": [
+              {
+                "link": null,
+                "localized_name": "图像",
+                "name": "image",
+                "type": "IMAGE"
+              }
+            ],
+            "mode": 0,
+            "order": 6,
+            "outputs": [
+              {
+                "links": [],
+                "localized_name": "图像",
+                "name": "IMAGE",
+                "type": "IMAGE"
+              }
+            ],
+            "pos": [
+              63.65825653076172,
+              829.6044921875
+            ],
+            "properties": {
+              "Node name for S&R": "ImageScale",
+              "cnr_id": "comfy-core",
+              "ver": "0.3.27"
+            },
+            "size": [
+              315,
+              130
+            ],
+            "type": "ImageScale",
+            "widgets_values": [
+              "nearest-exact",
+              512,
+              512,
+              "disabled"
+            ]
+          }
+        ],
+        "packname": "1",
+        "version": "0.0"
+      }
+    }
+  },
+  "version": 0.4
+}

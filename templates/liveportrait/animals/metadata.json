@@ -1,0 +1,9 @@
+{
+  "title": "LivePortrait Animals 1.0",
+  "description": "LivePortrait Animals是LivePortrait模型的动物专用版本，能够将静态动物图像转换为动态头像。这个工作流展示了如何使用ComfyUI创建动物形象的动画效果。",
+  "difficulty": "intermediate",
+  "model": "other",
+  "purpose": "animation",
+  "estimated_time": 25,
+  "learning_objectives": "学习如何使用LivePortrait模型创建动物动画，掌握动物形象的动画参数设置，了解图像到动画的转换原理。"
+} 

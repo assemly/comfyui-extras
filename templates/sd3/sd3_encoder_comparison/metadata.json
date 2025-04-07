@@ -1,0 +1,9 @@
+{
+  "title": "SD3编码器对比实验",
+  "description": "这个工作流展示了SD3内置文本编码器与外部编码器的对比实验，帮助理解不同文本编码器对生成结果的影响。通过并行对比，可以清晰看到同一提示词在不同编码器下的表现差异。",
+  "difficulty": "advanced",
+  "model": "sd3",
+  "purpose": "experiment",
+  "estimated_time": 30,
+  "learning_objectives": "了解SD3内置文本编码器与外部编码器的区别，学习如何评估不同编码器的优缺点，掌握文本编码器对生成结果的影响机制和选择策略。"
+} 

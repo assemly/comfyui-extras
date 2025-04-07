@@ -1,0 +1,963 @@
+{
+  "id": "a9ff9e79-409f-4124-bc54-a81a0f7cdcc8",
+  "revision": 0,
+  "last_node_id": 75,
+  "last_link_id": 55,
+  "nodes": [
+    {
+      "id": 55,
+      "type": "MarkdownNote",
+      "pos": [
+        -217.38504028320312,
+        811.8383178710938
+      ],
+      "size": [
+        496.2822570800781,
+        248.5205535888672
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "注意",
+      "properties": {},
+      "widgets_values": [
+        "## 使用建议与注意事项  \n\n| 项目 | 说明 |\n|------|------|\n| **模型匹配** | 不同 ControlNet 模型需匹配对应的预处理器类型（如OpenPose对应姿态图） |\n| **图 + 词协同** | 仅有参考图不足，建议搭配提示词明确风格和主体 |\n| **保持预处理简洁清晰** | 结构图越干净，生成结果越可控 |\n| **可以堆叠使用** | ComfyUI 支持多ControlNet输入，可控制多个特征维度 |\n| **注意影响权重** | 各ControlNet输入可设置不同的影响力，避免过强导致模型失控 |"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 56,
+      "type": "MarkdownNote",
+      "pos": [
+        326.524658203125,
+        815.9613037109375
+      ],
+      "size": [
+        496.2822570800781,
+        248.5205535888672
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "一些小技巧",
+      "properties": {},
+      "widgets_values": [
+        "💡 **实用技巧：**\n- 在 ComfyUI 中使用 `Preprocessor + ControlNet` 节点组合可快速测试不同控制模式  \n- 支持批量处理、局部遮罩等高级用法  \n- 与 LoRA、T2I-Adapter 等组件配合使用效果更佳"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 48,
+      "type": "MarkdownNote",
+      "pos": [
+        -217.43490600585938,
+        301.2272033691406
+      ],
+      "size": [
+        1042.5390625,
+        456.203125
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "ControlNet控制图像生成",
+      "properties": {},
+      "widgets_values": [
+        "## 基本概念  \n**ControlNet** 是 Stable Diffusion 的扩展模块，允许通过结构化信息（如姿势、边缘、深度图等）来引导图像生成过程，从而实现更高精度的图像控制。\n\n“在 AI 图像生成过程中，要精确控制图像生成并不是一键容易的事情，通常需要通过许多次的图像生成才可能生成满意的图像，但随着 ControlNet 的出现，这个问题得到了很好的解决。\nControlNet 是一种基于扩散模型（如 Stable Diffusion）的条件控制生成模型，最早由Lvmin Zhang与 Maneesh Agrawala 等人于 2023 年提出Adding Conditional Control to Text-to-Image Diffusion Models\nControlNet 模型通过引入多模态输入条件（如边缘检测图、深度图、姿势关键点等），显著提升了图像生成的可控性和细节还原能力。 使得我们可以进一步开始控制图像的风格、细节、人物姿势、画面结构等等，这些限定条件让图像生成变得更加可控，在绘图过程中也可以同时使用多个 ControlNet 模型，以达到更好的效果。”----这段话引用自官方ControNet教程\n\n## 核心功能  \n- **结构引导：** 利用线条图、姿势图、深度图等作为输入，引导生成图像内容  \n- **风格融合：** 同时结合提示词和结构图，实现“风格 + 结构”的控制  \n- **区域可控：** 支持多路ControlNet或遮罩区域控制，细粒度定向绘图\n\n\n## 常见预处理器类型  \n\n| 预处理器 | 描述 | 适用场景 |\n|----------|------|----------|\n| **Canny** | 提取图像边缘线条 | 线稿、草图生成 |\n| **OpenPose** | 获取人体骨架姿势点 | 人体姿态控制 |\n| **Depth (MiDaS)** | 获取图像深度信息 | 保留物体空间感和透视结构 |\n| **MLSD** | 精确线段检测 | 建筑、室内、构图线框图 |\n| **Scribble/XDoG** | 草图风格轮廓图 | 草图变图、创意绘图 |\n| **NormalMap** | 法线信息图 | 立体感增强，适用于建模参考 |\n| **LineArt/AnimeLine** | 动漫线稿提取 | 二次元风格图像生成 |\n\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 63,
+      "type": "EmptyLatentImage",
+      "pos": [
+        1780.02294921875,
+        999.6427001953125
+      ],
+      "size": [
+        300,
+        110
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "LATENT",
+          "localized_name": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            37
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        1
+      ]
+    },
+    {
+      "id": 69,
+      "type": "ControlNetLoader",
+      "pos": [
+        1331.7554931640625,
+        1216.4908447265625
+      ],
+      "size": [
+        340,
+        60
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "CONTROL_NET",
+          "localized_name": "ControlNet",
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "slot_index": 0,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "ControlNetLoader"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 70,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        893.0101928710938,
+        726.2232666015625
+      ],
+      "size": [
+        380,
+        100
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "MODEL",
+          "localized_name": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            34
+          ]
+        },
+        {
+          "label": "CLIP",
+          "localized_name": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 1,
+          "links": [
+            40,
+            41
+          ]
+        },
+        {
+          "label": "VAE",
+          "localized_name": "VAE",
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 2,
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 64,
+      "type": "VAEDecode",
+      "pos": [
+        2461.59619140625,
+        739.1790161132812
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "samples",
+          "localized_name": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 38
+        },
+        {
+          "label": "vae",
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 39
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "localized_name": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            42
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 71,
+      "type": "SaveImage",
+      "pos": [
+        2718.156982421875,
+        736.303955078125
+      ],
+      "size": [
+        580,
+        650
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "localized_name": "图片",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 42
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 68,
+      "type": "LoadImage",
+      "pos": [
+        890.0194091796875,
+        979.6427001953125
+      ],
+      "size": [
+        387.97003173828125,
+        465.5097961425781
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "localized_name": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            53
+          ]
+        },
+        {
+          "label": "MASK",
+          "localized_name": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "slot_index": 1,
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "传1024x1024的图片",
+        "image"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 60,
+      "type": "Note",
+      "pos": [
+        1335.2052001953125,
+        293.8597412109375
+      ],
+      "size": [
+        393.2366943359375,
+        130.11187744140625
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "模型存放目录",
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI/\n├── models/\n│   ├── checkpoints/\n│   │   └── dreamCreationVirtual3DECommerce_v10.safetensors\n│   ├── vae/\n│   │   └── vae-ft-mse-840000-ema-pruned.safetensors\n│   └── controlnet/\n│       └── control_v11p_sd15_scribble_fp16.safetensors\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 57,
+      "type": "MarkdownNote",
+      "pos": [
+        -217.0440673828125,
+        1108.2913818359375
+      ],
+      "size": [
+        1046.7078857421875,
+        443.7515563964844
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "模型下载地址推荐",
+      "properties": {},
+      "widgets_values": [
+        "## 📦 ControlNet 模型下载地址推荐\n\n以下是一些常用的 ControlNet 模型及其下载链接，建议根据实际使用场景选择合适的模型，并放入 `ComfyUI/models/controlnet/` 文件夹下。\n\n| 模型名称 | 模型文件名 | 下载地址 | 功能描述 |\n|----------|------------|----------|----------|\n| **Canny** | `control_v11p_sd15_canny.pth` | [CivitAI 下载](https://civitai.com/models/125502) / [HuggingFace](https://huggingface.co/lllyasviel/ControlNet-v1-1) | 基于边缘线条控制构图 |\n| **OpenPose** | `control_v11p_sd15_openpose.pth` | [CivitAI 下载](https://civitai.com/models/125510) / [HuggingFace](https://huggingface.co/lllyasviel/ControlNet-v1-1) | 基于人体姿态骨架控制 |\n| **Depth** | `control_v11f1p_sd15_depth.pth` | [CivitAI 下载](https://civitai.com/models/125498) / [HuggingFace](https://huggingface.co/lllyasviel/ControlNet-v1-1) | 控制图像深度和空间感 |\n| **LineArt** | `control_v11p_sd15_lineart.pth` | [CivitAI 下载](https://civitai.com/models/125500) / [HuggingFace](https://huggingface.co/lllyasviel/ControlNet-v1-1) | 动漫或漫画风线稿 |\n| **MLSD** | `control_v11p_sd15_mlsd.pth` | [CivitAI 下载](https://civitai.com/models/125501) / [HuggingFace](https://huggingface.co/lllyasviel/ControlNet-v1-1) | 精确线段提取，适合建筑 |\n| **Scribble/XDoG** | `control_v11p_sd15_scribble.pth` | [CivitAI 下载](https://civitai.com/models/125503) / [HuggingFace](https://huggingface.co/lllyasviel/ControlNet-v1-1) | 草图风格绘制 |\n| **Normal Map** | `control_v11p_sd15_normalbae.pth` | [CivitAI 下载](https://civitai.com/models/125499) / [HuggingFace](https://huggingface.co/lllyasviel/ControlNet-v1-1) | 法线贴图增强立体感 |\n\n> 📁 **使用说明：**\n> - 下载 `.pth` 文件后，放入 `ComfyUI/models/controlnet/` 目录\n> - 重启 ComfyUI 或重新加载模型列表\n> - 确保匹配对应的预处理器（如 Canny 预处理器配合 Canny 模型）\n\n---\n\n> 💡 **更多资源：**\n> - [ControlNet 官方模型仓库 (HuggingFace)](https://huggingface.co/lllyasviel/ControlNet-v1-1)\n> - [Stable Diffusion 模型合集 (CivitAI)](https://civitai.com/tag/controlnet)\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 74,
+      "type": "MarkdownNote",
+      "pos": [
+        890.1571655273438,
+        292.54052734375
+      ],
+      "size": [
+        409.70184326171875,
+        140.15707397460938
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "模型下载地址",
+      "properties": {},
+      "widgets_values": [
+        "# [官方教程下载地址](https://docs.comfy.org/tutorials/controlnet/controlnet)\n\n# 速度较慢,下载[百度网盘](https://pan.baidu.com/s/1e3rNy74gHrWjJQthVKwWeg?pwd=nvn7)\n\n# [点击加入QQ交流群【森么问题吖】](https://qm.qq.com/q/y33rTbBMFG)\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 40,
+      "type": "MarkdownNote",
+      "pos": [
+        892.04833984375,
+        477.98583984375
+      ],
+      "size": [
+        313.78045654296875,
+        186.564208984375
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "作业-第一次上色",
+      "properties": {},
+      "widgets_values": [
+        "-- 1. 根据模型推荐地址，下载相关模型，并放到相关目录中，重启 ComfyUI 加载。  \n-- 2. 加载相关模型。    \n-- 3. 选择自己的线稿图片进行上传格式按1024*1024。   \n-- 4. 生成第一张自己的上色图吧。\n"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 65,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1320.0208740234375,
+        729.6426391601562
+      ],
+      "size": [
+        422.84503173828125,
+        164.31304931640625
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "clip",
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 40
+        }
+      ],
+      "outputs": [
+        {
+          "label": "CONDITIONING",
+          "localized_name": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            48
+          ]
+        }
+      ],
+      "title": "正向提示词",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "Chinese traditional architecture, elegant palace with curved eaves and golden roof, intricate wooden carvings, red pillars with dragon motifs, symmetrical layout, stone lion statues, blue porcelain tiles, misty mountain backdrop, cherry blossom trees, traditional Chinese garden with koi pond, soft sunlight, highly detailed, ultra-realistic, 8K resolution, cinematic lighting, serene atmosphere, cultural heritage aesthetic"
+      ]
+    },
+    {
+      "id": 66,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1320.0208740234375,
+        939.6427001953125
+      ],
+      "size": [
+        425.27801513671875,
+        180.6060791015625
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "clip",
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 41
+        }
+      ],
+      "outputs": [
+        {
+          "label": "CONDITIONING",
+          "localized_name": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            49
+          ]
+        }
+      ],
+      "title": "负向提示词",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "low quality, blurry, distorted perspective, modern architecture, skyscrapers, western-style buildings, neon lights, industrial elements, futuristic designs, deformed shapes, ugly, bad proportions, extra limbs, text, watermark, overexposed, underexposed, grainy, low resolution, cartoonish, anime style, fantasy elements"
+      ]
+    },
+    {
+      "id": 67,
+      "type": "VAELoader",
+      "pos": [
+        890.0194091796875,
+        869.6427001953125
+      ],
+      "size": [
+        380,
+        58
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "VAE",
+          "localized_name": "VAE",
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 0,
+          "links": [
+            39,
+            52
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 75,
+      "type": "ControlNetApplySD3",
+      "pos": [
+        1752.7032470703125,
+        510.0162658691406
+      ],
+      "size": [
+        315,
+        186
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 48
+        },
+        {
+          "localized_name": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 49
+        },
+        {
+          "localized_name": "ControlNet",
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": null
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 52
+        },
+        {
+          "localized_name": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 53
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            54
+          ]
+        },
+        {
+          "localized_name": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            55
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "ControlNetApplySD3"
+      },
+      "widgets_values": [
+        1,
+        0.10000000000000002,
+        1
+      ]
+    },
+    {
+      "id": 62,
+      "type": "KSampler",
+      "pos": [
+        2110.024169921875,
+        739.6427001953125
+      ],
+      "size": [
+        315,
+        474
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "model",
+          "localized_name": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 34
+        },
+        {
+          "label": "positive",
+          "localized_name": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 54
+        },
+        {
+          "label": "negative",
+          "localized_name": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 55
+        },
+        {
+          "label": "latent_image",
+          "localized_name": "Latent图像",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 37
+        }
+      ],
+      "outputs": [
+        {
+          "label": "LATENT",
+          "localized_name": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            38
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        776509832134660,
+        "randomize",
+        20,
+        8,
+        "euler",
+        "normal",
+        0.7000000000000002
+      ]
+    }
+  ],
+  "links": [
+    [
+      34,
+      70,
+      0,
+      62,
+      0,
+      "MODEL"
+    ],
+    [
+      37,
+      63,
+      0,
+      62,
+      3,
+      "LATENT"
+    ],
+    [
+      38,
+      62,
+      0,
+      64,
+      0,
+      "LATENT"
+    ],
+    [
+      39,
+      67,
+      0,
+      64,
+      1,
+      "VAE"
+    ],
+    [
+      40,
+      70,
+      1,
+      65,
+      0,
+      "CLIP"
+    ],
+    [
+      41,
+      70,
+      1,
+      66,
+      0,
+      "CLIP"
+    ],
+    [
+      42,
+      64,
+      0,
+      71,
+      0,
+      "IMAGE"
+    ],
+    [
+      48,
+      65,
+      0,
+      75,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      49,
+      66,
+      0,
+      75,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      52,
+      67,
+      0,
+      75,
+      3,
+      "VAE"
+    ],
+    [
+      53,
+      68,
+      0,
+      75,
+      4,
+      "IMAGE"
+    ],
+    [
+      54,
+      75,
+      0,
+      62,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      55,
+      75,
+      1,
+      62,
+      2,
+      "CONDITIONING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "第4章：ControlNet控制图像生成资料阅读",
+      "bounding": [
+        -249.466064453125,
+        191.56654357910156,
+        1101.0692138671875,
+        1406.16845703125
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "作业区",
+      "bounding": [
+        862.5762939453125,
+        193.90402221679688,
+        2498.668701171875,
+        1405.4268798828125
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8453779308311243,
+      "offset": [
+        -445.40129482464016,
+        -360.23909178040196
+      ]
+    },
+    "groupNodes": {
+      "1::imgconvenience": {
+        "author": "1",
+        "category": "test",
+        "datetime": 1742697742923,
+        "external": [
+          [
+            1,
+            0,
+            "IMAGE"
+          ]
+        ],
+        "links": [
+          [
+            0,
+            0,
+            1,
+            0,
+            76,
+            "IMAGE"
+          ]
+        ],
+        "nodes": [
+          {
+            "flags": {},
+            "id": -1,
+            "index": 0,
+            "inputs": [],
+            "mode": 0,
+            "order": 1,
+            "outputs": [
+              {
+                "links": [],
+                "localized_name": "图像",
+                "name": "IMAGE",
+                "type": "IMAGE"
+              }
+            ],
+            "pos": [
+              -336.2590026855469,
+              827.5228881835938
+            ],
+            "properties": {
+              "Node name for S&R": "EmptyImage",
+              "cnr_id": "comfy-core",
+              "ver": "0.3.27"
+            },
+            "size": [
+              315,
+              130
+            ],
+            "type": "EmptyImage",
+            "widgets_values": [
+              512,
+              512,
+              1,
+              0
+            ]
+          },
+          {
+            "flags": {},
+            "id": -1,
+            "index": 1,
+            "inputs": [
+              {
+                "link": null,
+                "localized_name": "图像",
+                "name": "image",
+                "type": "IMAGE"
+              }
+            ],
+            "mode": 0,
+            "order": 6,
+            "outputs": [
+              {
+                "links": [],
+                "localized_name": "图像",
+                "name": "IMAGE",
+                "type": "IMAGE"
+              }
+            ],
+            "pos": [
+              63.65825653076172,
+              829.6044921875
+            ],
+            "properties": {
+              "Node name for S&R": "ImageScale",
+              "cnr_id": "comfy-core",
+              "ver": "0.3.27"
+            },
+            "size": [
+              315,
+              130
+            ],
+            "type": "ImageScale",
+            "widgets_values": [
+              "nearest-exact",
+              512,
+              512,
+              "disabled"
+            ]
+          }
+        ],
+        "packname": "1",
+        "version": "0.0"
+      }
+    }
+  },
+  "version": 0.4
+}

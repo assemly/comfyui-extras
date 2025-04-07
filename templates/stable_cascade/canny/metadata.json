@@ -1,0 +1,9 @@
+{
+  "title": "Stable Cascade Canny边缘控制",
+  "description": "这个工作流展示了如何将Stable Cascade与Canny边缘检测器和ControlNet结合使用，通过提取图像的边缘信息来控制生成内容的结构和形状。这种方法可以保留原始图像的基本轮廓，同时赋予全新的视觉风格。",
+  "difficulty": "advanced",
+  "model": "stable_cascade",
+  "purpose": "controlnet",
+  "estimated_time": 30,
+  "learning_objectives": "学习如何使用Canny边缘检测器提取图像特征，掌握ControlNet与Stable Cascade的结合使用方法，理解如何通过边缘信息控制生成内容的结构和构图。"
+} 

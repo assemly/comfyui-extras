@@ -1,0 +1,7 @@
+﻿{
+  "title": "SD3 Medium + 肖像大师",
+  "description": "SD3 Medium与肖像大师插件结合使用的工作流，专为生成高质量人像照片设计。",
+  "difficulty": "intermediate",
+  "model": "sd3",
+  "purpose": "portrait"
+}

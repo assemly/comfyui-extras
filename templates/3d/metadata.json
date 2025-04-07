@@ -1,0 +1,7 @@
+{
+  "title": "3D建模工作流",
+  "description": "使用ComfyUI进行3D建模相关的工作流集合，包括CRM 3D和草图到3D转换等功能。",
+  "model": "other",
+  "purpose": "3d",
+  "difficulty": "advanced"
+} 

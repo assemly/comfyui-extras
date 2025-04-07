@@ -1,0 +1,7 @@
+{
+  "title": "LivePortrait模型工作流",
+  "description": "LivePortrait是一个能将静态图像转换为动态头像的模型，这些工作流展示了LivePortrait模型在ComfyUI中的使用方法和动画效果。",
+  "model": "other",
+  "purpose": "animation",
+  "difficulty": "intermediate"
+} 

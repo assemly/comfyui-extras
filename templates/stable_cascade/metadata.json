@@ -1,0 +1,7 @@
+{
+  "title": "Stable Cascade系列",
+  "description": "Stable Cascade是Stability AI推出的两阶段扩散模型，比传统模型更加高效。这个系列包含了多种使用场景和技术，从基础生成到控制网络应用。",
+  "model": "stable_cascade",
+  "purpose": "image_gen",
+  "difficulty": "intermediate"
+} 

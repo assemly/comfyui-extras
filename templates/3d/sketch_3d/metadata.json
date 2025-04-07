@@ -1,0 +1,9 @@
+{
+  "title": "Sketch to 3D",
+  "description": "Sketch to 3D工作流允许用户将简单的草图转换为3D模型，通过先进的AI模型实现草图到3D的快速转换。",
+  "difficulty": "intermediate",
+  "model": "other",
+  "purpose": "3d",
+  "estimated_time": 25,
+  "learning_objectives": "学习如何将草图转换为3D模型，掌握3D转换的关键参数和技巧，了解3D生成模型的基本工作原理。"
+} 

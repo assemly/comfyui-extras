@@ -1,0 +1,9 @@
+{
+  "title": "SD3 Medium + Qwen2",
+  "description": "SD3 Medium与Qwen2结合使用的工作流，通过大语言模型增强提示词生成能力。Qwen2是阿里云开源的大语言模型，结合能提供更智能和丰富的提示词扩展。",
+  "difficulty": "intermediate",
+  "model": "sd3",
+  "purpose": "image_gen",
+  "estimated_time": 25,
+  "learning_objectives": "学习如何结合大语言模型与SD3 Medium进行创作，利用Qwen2的强大能力扩展提示词，提高图像生成质量和创意表达。"
+} 

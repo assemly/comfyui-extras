@@ -1,0 +1,7 @@
+{
+  "title": "SD3模型系列",
+  "description": "SD3是Stability AI推出的最新文本到图像扩散模型，支持多种语言提示，相比之前版本具有更高的图像质量和更好的文本遵循能力。",
+  "difficulty": "intermediate",
+  "model": "sd3",
+  "purpose": "image_gen"
+} 

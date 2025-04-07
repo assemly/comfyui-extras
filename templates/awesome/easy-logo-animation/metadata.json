@@ -1,0 +1,9 @@
+{
+    "title": "简易标志动画 Easy Logo Animation",
+    "description": "轻松将静态标志或图像转换为动态动画，适用于品牌宣传和视觉设计",
+    "difficulty": "intermediate",
+    "model_type": "other",
+    "purpose": "video_generation",
+    "estimated_time": "20-35分钟",
+    "learning_objectives": ["学习图像动画生成技术", "掌握标志动画制作方法", "了解简单视频生成的工作流程"]
+} 

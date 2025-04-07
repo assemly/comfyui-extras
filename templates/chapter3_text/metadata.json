@@ -1,0 +1,17 @@
+{
+  "title": "第3章：提示词工程基础",
+  "description": "提示词是AI图像生成的关键！本章将深入探讨如何编写有效的提示词，包括关键词排序、使用权重、风格描述词等技巧。你将学习如何通过调整提示词来获得更精确的生成结果，以及避免常见的提示词错误。",
+  "difficulty": "intermediate",
+  "purpose": "tutorial",
+  "model": "sd15",
+  "complexity": "advanced",
+  "learning_objectives": [
+    "理解提示词对生成图像的影响",
+    "学习提示词的基本结构和组成",
+    "掌握提示词权重和修饰符的使用",
+    "练习编写不同风格和内容的提示词"
+  ],
+  "prerequisites": ["chapter1_intro", "chapter2_basics"],
+  "estimated_time": "20分钟",
+  "related_chapters": ["chapter2_basics"]
+} 
